@@ -1,0 +1,128 @@
+//primeros pasos en SASS
+
+//Import
+@import "utilities/variables";
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*estilos de body*/
+body{
+    background-color: $color-secundario;
+}
+
+/*estilos de header*/
+.menu-dist{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.titulo-main{
+    font-size: 3rem;
+    color: $color-secundario;
+}
+
+.color-burger{
+    background-color: $color-secundario;
+}
+
+.font-color{
+    color: $color-secundario;
+}
+
+.menu-color{
+    background-color: $color-principal;
+}
+
+.menu-gap{
+    column-gap: 4rem;
+}
+
+.header-font{
+    font-family: 'Oswald', sans-serif;
+}
+
+/* estilos de main*/
+
+//Nesting
+main{
+    font-family: 'Oswald', sans-serif;
+    .titulo-noticias{
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        font-family: 'Shojumaru', cursive;
+        font-size: 2.4rem;
+    }
+    .caja{
+        width: 100%;
+        display: flex;
+        max-width: 1100px;
+        .tarjeta{
+            width: 100%;
+            margin: 20px;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+            cursor: default;
+            transition: all 400ms ease;
+        }
+        .tarjeta:hover{
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+            transform: translateY(-3%);
+        }
+        .tarjeta img{
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+        .tarjeta .contenido{
+            padding: 0.5rem;
+        }
+        .tarjeta .contenido h2{
+            font-weight: 12rem;
+            margin-bottom: 0.5rem;
+        }
+        .tarjeta .contenido a{
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px;
+            margin-top: 10px;
+            color: $color-principal;
+            border: 1px solid $color-principal;
+            border-radius: 4px;
+            transition: all 400ms ease;
+        }
+        
+        .tarjeta .contenido a:hover{
+            background: $color-principal;
+            color: #fff;
+        }
+    }
+}
+
+/* estilos de footer */
+
+footer{
+    background: #21325E;
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    font-family: 'Oswald', sans-serif;
+    .footer-text{
+        color: $color-secundario;
+        padding: 1rem;
+        font-size: small;
+    }
+    .social{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
